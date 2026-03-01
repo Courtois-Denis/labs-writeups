@@ -1,0 +1,67 @@
+# Active Directory Basics
+
+## Objectif
+Comprendre et mettre en pratique les concepts et fonctionnalités de base
+d’Active Directory dans un environnement Windows.
+
+## Environnement
+- Plateforme : TryHackMe
+- OS / Type : Windows
+- Niveau : Débutant / SOC Analyst N1
+
+## Outils utilisés
+- Machine virtuelle Windows
+- Active Directory (Domain Controller)
+
+## Démarche
+
+### 1. Analyse et compréhension
+Le serveur chargé d’exécuter les services Active Directory est appelé
+"Domain Controller (DC)".  
+Dans un domaine Windows, les identifiants et informations des utilisateurs
+sont stockés de manière centralisée dans **Active Directory".
+
+Les "Unités Organisationnelles (OU)" permettent d’organiser les utilisateurs
+et les ordinateurs afin d’appliquer des stratégies spécifiques, notamment via
+les Group Policy Objects (GPO), en fonction du rôle de chaque utilisateur
+au sein de l’entreprise.
+
+Un utilisateur ne peut appartenir qu’à "une seule OU", car il serait incohérent
+d’appliquer plusieurs stratégies contradictoires à un même compte.
+
+Les "groupes de sécurité", quant à eux, servent à gérer les autorisations
+d’accès aux ressources (dossiers partagés, imprimantes, applications, etc.).
+Un utilisateur peut appartenir à "plusieurs groupes", ce qui permet de lui
+accorder différents niveaux d’accès selon ses besoins.
+
+### 2. Actions réalisées
+Lors du lab, j’ai effectué plusieurs manipulations afin de mieux comprendre
+la structure d’Active Directory, notamment :
+- Suppression d’OU et d’utilisateurs inutiles
+- Observation du fonctionnement de l’authentification Kerberos
+- Compréhension des notions de Ticket Granting Ticket (TGT), Ticket Granting Service (TGS) et SPN
+
+Ces actions m’ont permis de visualiser concrètement la gestion des identités
+et des accès dans un environnement Windows.
+
+## Ce que j’ai appris
+- Le rôle du Domain Controller dans un domaine Windows
+- La différence entre OU et groupes de sécurité
+- Les bases de l’authentification Kerberos
+- Les notions de Trust Relationships, Forests et Trees dans Active Directory
+
+## Application en cybersécurité
+Active Directory est une cible privilégiée lors des attaques en entreprise.
+En SOC, la compréhension d’AD est essentielle pour analyser :
+- des tentatives d’authentification suspectes
+- des mouvements latéraux
+- des compromissions de comptes à privilèges
+
+Les logs liés à Active Directory jouent un rôle clé dans la détection
+et l’investigation des incidents de sécurité.
+
+## Conclusion
+Ce lab m’a permis d’acquérir une première compréhension d’Active Directory
+et de son importance dans les environnements Windows, même si certaines notions restent encore à approfondir, notamment sur la
+sécurité et les attaques liées à AD, cette base est indispensable pour
+évoluer vers des analyses SOC plus avancées.
