@@ -1,0 +1,42 @@
+# Linux Fundamentals
+ ## Objectif
+Apprendre les fondamentaux de Linux, et mettre en pratique les premières commandes basique du terminal.
+## Environnement
+- Plateforme : TryHackMe 
+- OS : Linux (Ubuntu) 
+- Type : Lab débutant 
+
+## Outils utilisés 
+- Terminal Linux 
+- Commandes de base utilisé : "echo","whoami", "ls".... 
+## Démarche 
+
+### 1. Découvertes des commandes 
+J’ai commencé par utlisé des commandes simples tels que "echo" qui a pour finalité de faire dire à la machine, le mots suivant la commande 
+Exemple : echo I'm Batman I'm Batman 
+Puis j'ai également utilisé la commande "whoami" qui sert à savoir avec quel username nous sommes connecter, une commande interressante pour savoir 
+si on agit avec des privilèges élevés ou non D'autres commandes sont également interressante particulièrement lorsqu'elles sont utilisés ensemble ("ls","cd","cat","pwd"). 
+
+### 2. Manipulation de fichiers 
+J’ai crée de nouveau fichier avec un message à l'intérieur en rajoutant un opérateur shell à ma commande : 
+echo world 
+world echo I'm Batman > world 
+cat world 
+I'm batman 
+
+Et si un fichier "world" existe déjà cette commande écrasera le fichier et le remplacera par celui ci, et pour éviter ça, il faut utiliser un autre opérateur shell 
+echo No I'm Superman >> world 
+cat world 
+I'm Batman 
+No I'm Superman 
+
+## Ce que j’ai appris 
+- Linux est un opérateur système (OS) open source donc il a plein de variantes de toutes formes de tailles et d'utilités différente mais 
+  c'est donc plus intimidant à s'y interresser que windows. 
+- L'importance de la syntaxe, si je commet une erreur cela empechera l'execution correcte des commandes et si par exemple j'utilise un opérateur shell qui me permet d'utiliser 
+  deux commandes simultanément, la commande 2 ne fonctionnera seulement si la commande 1 a fonctionné. 
+- Certaines commandes peuvent avoir des impacts importants si elles sont mal utilisée (suppression definitive de fichiers etc). 
+
+# Conclusion 
+Je n'ai seulement effleuré que le début de ce gigantesque OS, il y a tellement d'autres choses à savoir et à faire sur linux, également d'importantes autres notions à comprendre,
+tels que le Least Privilege Access pour limiter les impacts en cas d’erreur ou de compromission.
